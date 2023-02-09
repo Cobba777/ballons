@@ -1,0 +1,28 @@
+.row {
+   padding-bottom: 5rem;
+}
+
+.intro {
+   padding-top: 8rem;
+}
+
+.section-advanture {
+   padding: 21rem 0;
+   height: 100vh;
+   background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url(../img/ballons-two.jpg) center / cover no-repeat;
+   clip-path: polygon(0 5%, 100% 16%, 100% 96%, 0 87%);
+
+}
+
+.section-tour {
+   padding-top: 8rem;
+}
+
+.align-center {
+   text-align: center;
+}
+
+.section-feedback {
+   position: relative;
+   padding: 8rem 0;
+}

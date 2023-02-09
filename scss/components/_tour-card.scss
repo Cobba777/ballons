@@ -1,0 +1,127 @@
+.card-tour {
+   height: 50rem;
+   perspective: 150rem;
+   position: relative;
+
+   &__side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50rem;
+      width: 100%;
+      backface-visibility: hidden;
+      transition: all .6s ease-out;
+      overflow: hidden;
+      border-radius: .5rem;
+      box-shadow: $box-shadow;
+
+      &--front {
+         background: $color-white;
+      }
+
+      &--back {
+         background: rgb(197, 170, 16);
+         transform: rotateY(180deg);
+         background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
+      }
+   }
+
+   &:hover &__side--front {
+      transform: rotateY(-180deg);
+   }
+
+   &:hover &__side--back {
+      transform: rotateY(0deg);
+   }
+
+   &__img {
+      height: 20rem;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+      background-blend-mode: hard-light;
+
+      &--imgN1 {
+         background: $color-brown-light url(../img/tour-1.jpg) center / cover no-repeat;
+      }
+
+      &--imgN2 {
+         background: $color-brown-light url(../img/tour-2.jpg) center / cover no-repeat;
+      }
+      
+      &--imgN3 {
+         background: $color-brown-light url(../img/tour-3.jpg) center / cover no-repeat;
+      }
+   }
+
+   &__title {
+      position: absolute;
+      top: 16rem;
+      right: 0;
+      font-weight: 300;
+      font-size: 2.8rem;
+      line-height: 3.3rem;
+      letter-spacing: .2rem;
+      text-align: right;
+
+      &-span {
+      padding: 1.1rem .8rem .5rem .8rem;
+      background: linear-gradient(90deg, $color-brown-light, $color-brown-dark);
+      color: $color-white;
+
+         &--n2 {
+            position: absolute;
+            top: 3rem;
+            right: 0;
+         }
+      }
+
+   }
+
+   &__descr {
+      ul {
+         text-align: center;
+         width: 70%;
+         margin: 0 auto;
+
+         li {
+            display: inline-block;
+            border-bottom: 1px solid $color-gray;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            letter-spacing: .2rem;
+            color: $color-gray;
+            &:not(:last-child) {
+               margin-bottom: 2rem;
+            }
+         }
+      }
+   }
+
+   &__backSide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &-text {
+         text-align: center;
+         margin-bottom: 8rem;
+         color: #fff;
+         letter-spacing: .2rem;
+         line-height: 7rem;
+
+         &--n1 {
+            font-weight: 300;
+            font-size: 1.6rem;
+         }
+
+         &--n2 {
+            font-weight: 500;
+            font-size: 6rem;
+
+         }
+
+      }
+   }
+
+}

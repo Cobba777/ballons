@@ -1,0 +1,39 @@
+
+.title {
+   font-weight: 800;
+   font-size: 3.6rem;
+   line-height: 4.3rem;
+   letter-spacing: 1rem;
+   background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%);
+   background-clip: text;
+   color: transparent;
+   text-align: center;
+   transition: all .3s;
+   backface-visibility: hidden;
+
+   &:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: $shadow-text;
+   }
+
+   &--white {
+      color: $color-white;
+   }
+
+}
+
+.title-three {
+   font-weight: 700;
+   font-size: 2rem;
+   line-height: 2.4rem;
+   letter-spacing: .2rem;
+   color: $color-gray;
+}
+
+.paragraph {
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 2.24rem;
+   letter-spacing: .2rem;
+   color: $color-gray;
+}

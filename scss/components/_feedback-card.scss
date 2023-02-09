@@ -1,0 +1,57 @@
+.feedback-card {
+   margin: 0 auto;
+   width: 85%;
+   padding: 6rem;
+   box-shadow: $box-shadow;
+   background: rgba(255, 255, 255, 0.8);
+   transform: skewX(330deg);
+
+   &__block {
+      transform: skewX(-330deg);
+   }
+
+   &__img {
+      position: relative;
+      margin-right: 4rem;
+      width: 15rem;
+      height: 15rem;
+      float: left;
+      border-radius: 100rem;
+      overflow: hidden;
+      shape-outside: circle(50% at 50% 50%);
+      
+      img {
+         height: 100%;
+         transition: all .5s;
+         transform: scale(1.2);
+      }
+
+   }
+
+   &__name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      letter-spacing: .2rem;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      transition: all .5s;
+   }
+   
+   &:hover &__name {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+   }
+
+   &:hover img {
+      filter: blur(.3rem);
+      transform: scale(1.0);
+   }
+   
+
+}
