@@ -6,24 +6,28 @@
 
     &__logo {
       position: absolute;
-      width: 5.6rem;
-      height: 5rem;
+      width: 6rem;
+      height: 6rem;
       top: 5rem;
       left: 5rem;
     }
 
-    &__box {
+    &__box {   
       position: absolute;
       width: 100%;
       text-align: center;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @include respond(tab-land) {
+         top: 50%;
+      }
     }
 }
 
 .title-first {
    color: $color-white;
+  
    
    &__main {
       display: block;
@@ -38,6 +42,9 @@
       animation-duration: 1.5s;
       animation-delay: 1s;
       animation-timing-function: ease;
+      @include respond(tab-port) {
+         font-size: 4rem;
+      }
 
    }
 
@@ -53,6 +60,12 @@
       animation-duration: 1.5s;
       animation-delay: 1s;
       animation-timing-function: ease;
+      @include respond(tab-land) {
+         margin-bottom: 3rem;
+      }
+      @include respond(tab-port) {
+         font-size: 2.5rem;
+      }
 
    }
 }

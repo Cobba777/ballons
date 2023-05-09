@@ -14,6 +14,25 @@
    
    
    <div class="container">
+
+      <div class="navigation">
+         <input class="navigation__input" type="checkbox" id="navigation__item" name="navigation__name">
+         <label class="navigation__label" for="navigation__item">
+            <span class="navigation__icon"></span>
+         </label>
+         <div class="navigation__background"></div>
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+               <li class="navigation__item"><a class="navigation__link" href="#">О НАС</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="#">СКИДКИ</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="#">ЛУЧШИЕ ТУРЫ</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="#">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+               <li class="navigation__item"><a class="navigation__link" href="#">СВЯЗАТЬСЯ С НАМИ</a></li>
+            </ul>
+          </nav>
+      </div>
+
+
       <header class="header">
          <div class="header__logo">
             <img src="./icon/Icon-logo.svg" alt="">
@@ -169,12 +188,13 @@
                </div>
             </div>
             <div class="align-center">
-               <a class="btn btn--animated" href="#">ЗАБРОНИРОВАТЬ</a>
+               <a class="btn btn--animated margin-bottom-6rem" href="#">ЗАБРОНИРОВАТЬ</a>
             </div>
          </section>
 
          <section class="section-feedback">
 
+            <div class="bg-gradient"></div>
             <video class="bg-video" muted autoplay loop>
                <source src="video/baloon-3.mp4">
                <source src="video/baloons-4.webm">
@@ -215,7 +235,61 @@
                   <a class="btn btn--animated" href="#">ЗАБРОНИРОВАТЬ</a>
                </div>
          </section>
+         <section class="section-book">
+            <div class="row">
+               <div class="book">
+                  <div class="book__form">
+                     <div class="form">
+
+                        <h3 class="title margin-bottom-3rem title--form">ЗАБРОНИРОВАТЬ ТУР</h3>
+                        <div class="form__group">
+
+                           <input class="form__input" type="text" placeholder="Имя Фамилия" required id="name">
+                           <label class="form__label" for="name">Ваше Имя и Фамилия</label>
+                        </div>
+
+                        <div class="form__group">
+                           <input class="form__input" type="email" placeholder="Ваш email" required id="email">
+                           <label class="form__label" for="email">Ваш email</label>
+                        </div>
+
+                        <div class="form__group">
+                           <div class="form__group-radio">
+                              <input class="form__input-radio" type="radio" name="checked" id="tour-1">
+                              <label class="form__input-label" for="tour-1">
+                                 <span class="form__button-radio"></span>
+                                 Групповой тур</label>
+                           </div>
+                           <div class="form__group-radio">
+                              <input class="form__input-radio" type="radio" name="checked" id="tour-2">
+                              <label class="form__input-label" for="tour-2">
+                                 <span class="form__button-radio"></span>
+                                 Индивидуальный тур</label>
+                           </div>
+                        </div>
+                        <button class="btn btn--brown">ЗАБРОНИРОВАТЬ</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
+      <footer class="footer">
+         <div class="row align-center">
+            <a href="#">
+               <img class="footer__logo" src="./img/Icon-logo.png" alt="">
+            </a>
+         </div>
+         <div class="row">
+            <ul class="footer__list">
+               <li class="footer__item"><a href="#" class="footer__link">О НАС</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">СКИДКИ</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">ЛУЧШИЕ ТУРЫ</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+               <li class="footer__item"><a href="#" class="footer__link">СВЯЗАТЬСЯ С НАМИ</a></li>
+            </ul>
+         </div>
+      </footer>
    </div>
 
    <!-- <section class="grid-test">

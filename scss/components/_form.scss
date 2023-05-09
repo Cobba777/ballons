@@ -1,0 +1,134 @@
+.book {
+   height: 55rem;
+   background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255, 0.6) 53%, rgba(186,133,84,0.3) 53%, rgba(161,79,3, 0) 100%), url(../img/book.png) center / cover no-repeat;
+   box-shadow: $box-shadow;
+   border-radius: .5rem;
+   overflow: hidden;
+   @include respond(tab-port) {
+      background: #fff;
+      height: 60rem;
+   }
+}
+
+.form {
+   padding-top: 5rem;
+   padding-left: 5rem;
+   width: 60%;
+
+   &__group:not(:last-child) {
+      margin-bottom: 2rem;
+      @include respond(tab-land) {
+         margin-bottom: 0;
+      }
+   }
+
+   @include respond(tab-port) {
+      width: 100%;
+      padding: 5rem;
+   }
+
+
+   &__input {
+      padding: 2rem 0 2rem 2rem;
+      width: 70%;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      letter-spacing: .2rem;
+      color: #000000;
+      background-color: $color-white;
+      border-radius: .5rem;
+      border-bottom: 2px solid transparent;
+      @include respond(tab-port) {
+         box-shadow: $box-shadow;
+         border-bottom: .2rem solid gray;
+         width: 100%;
+      }
+
+      &:focus {
+         outline: none;
+         border-bottom: .2rem solid #66D763;
+         box-shadow: $box-shadow;
+      }
+
+      &:focus:invalid {
+         border-bottom: .2rem solid #D76363;
+      }
+   }
+
+   &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-3rem);
+   }
+   
+   &__label {
+      display: block;
+      margin-top: 1rem;
+      margin-left: 1.5rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      letter-spacing: .2rem;
+      color: $color-gray;
+      transition: .2s all;
+      @include respond(tab-port) {
+         margin-bottom: 2.3rem;
+      }
+      
+
+   }
+
+   &__group-radio {
+      margin-bottom: 4rem;
+      display: inline-block;
+      &:not(:last-child) {
+         margin-right: 2rem;
+      }
+      @include respond(tab-land) {
+         display: block;
+      }
+   }
+
+   &__input-label {
+      padding-left: 4rem;
+      position: relative;
+      cursor: pointer;
+     
+   }
+
+   &__button-radio {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      border: .5rem solid $color-brown-dark;
+      position: absolute;
+      top: -.5rem;
+      left: 0;
+      
+      &:after {
+         content: "";
+         display: block;
+         height: 1.5rem;
+         width: 1.5rem;
+         border-radius: 50%;
+         background: $color-brown-dark;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         opacity: 0;
+         transition: all .1s;
+      }
+
+   }
+
+   &__input-radio:checked ~ &__input-label &__button-radio::after {
+      opacity: 1;
+   }
+
+   &__input-radio {
+      display: none;
+   }
+}

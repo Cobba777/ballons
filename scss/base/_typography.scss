@@ -10,6 +10,18 @@
    text-align: center;
    transition: all .3s;
    backface-visibility: hidden;
+   @include respond(tab-port) {
+      font-size: 2.6rem;
+      line-height: 3.3rem;
+   }
+
+   &--form {
+      @include respond(tab-land) {
+         font-size: 2rem;
+      }
+      
+      
+   }
 
    &:hover {
       transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -28,6 +40,7 @@
    line-height: 2.4rem;
    letter-spacing: .2rem;
    color: $color-gray;
+
 }
 
 .paragraph {
@@ -37,3 +50,4 @@
    letter-spacing: .2rem;
    color: $color-gray;
 }
+
